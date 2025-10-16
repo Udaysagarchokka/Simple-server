@@ -1,70 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login - My Web Log</title>
+    
+    <style>
+        /* Embedded CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    .login-container {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 300px;
-    }
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 380px;
+            box-sizing: border-box;
+        }
 
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+        .logo img {
+            /* Placeholder for your actual logo image */
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #007bff; /* Color for logo placeholder */
+            display: block;
+            margin: 0 auto 15px;
+        }
 
-    .login-container input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #007BFF;
-      border: none;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+        .logo h1 {
+            font-size: 1.6em;
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+        }
 
-    .login-container input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+
+        .login-button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9em;
+        }
+
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 0 8px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="your-logo.png" alt="Company Logo">
+            <h1>Web Log Access</h1>
+        </div>
 
-  <div class="login-container">
-    <h2>Login</h2>
-    <form action="/login" method="post">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
+        <form action="#" method="POST" class="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
 
-      <input type="submit" value="Login">
-    </form>
-  </div>
+            <button type="submit" class="login-button">Sign In</button>
 
+            <div class="footer-links">
+                <a href="#">Forgot Password?</a>
+                |
+                <a href="#">Need an Account?</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
